@@ -1,5 +1,11 @@
-from cohortextractor import StudyDefinition, patients, codelist, codelist_from_csv  # NOQA
+from cohortextractor import (
+    StudyDefinition, 
+    patients, 
+    codelist, 
+)
 
+# Import codelists.py script
+from codelists import *
 
 study = StudyDefinition(
     default_expectations={
@@ -17,4 +23,12 @@ study = StudyDefinition(
             "int": {"distribution": "population_ages"},
         },
     ),
+    asthma_attack=patients.with_these_clinical_events(
+        asthma_attack_codes,
+        between=["2015-03-01", "2020-02-29"],
+        returning="date",
+        format="YYYY-MM-DD",
+        find_first_match_in_period=True,
+        return_expectations={"date": {"earliest": "2015-03-01", "latest": "2020-02-29"}},
+    )
 )

@@ -1,3 +1,10 @@
 {
-  "files": {}
+  "files": {
+    "user-elsie_horne-asthma-attack-example-1.csv": {
+      "id": "user/elsie_horne/asthma-attack-example-1/3e0fca81",
+      "url": "https://codelists.opensafely.org/codelist/user/elsie_horne/asthma-attack-example-1/3e0fca81/",
+      "downloaded_at": "2021-11-02 09:07:59.999146Z",
+      "sha": "d56d2fd426b2e0d1e98704cf7e8420c3bc9fdc89"
+    }
+  }
 }
