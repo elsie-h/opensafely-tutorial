@@ -7,3 +7,5 @@ output/*
 metadata/*
 venv/
 .DS_Store
+.Rproj.user
+.Rhistory
